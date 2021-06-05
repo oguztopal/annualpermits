@@ -10,13 +10,13 @@ import java.util.Date;
 @Data
 public class PersonDto implements Serializable {
 
-	@ApiModelProperty(name = "First Name ",position = 1 ,required = true)
+	@ApiModelProperty(name = "First Name ",position = 1 ,required = true , example = "oguz")
 	private String firstName;
 
-	@ApiModelProperty(name = "Last Name ",position  =2 ,required = true)
+	@ApiModelProperty(name = "Last Name ",position  =2 ,required = true, example = "topal")
 	private String lastName;
 
-	@ApiModelProperty(name = "Hire Date ",position = 3, example = "05.06.2021")
+	@ApiModelProperty(name = "Hire Date ",position = 3, example = "05-06-2021")
 	@JsonFormat(pattern="dd-MM-yyyy")
 	private Date hireDate;
 

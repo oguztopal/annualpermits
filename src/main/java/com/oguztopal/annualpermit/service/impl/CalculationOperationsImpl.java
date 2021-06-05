@@ -14,7 +14,7 @@ public class CalculationOperationsImpl implements CalculationOperations {
 	public Long calculateAllHasPermitFromHireDate(Date hireDate , Date startDate){
 		long result = DateUtil.calculateYearDiff(startDate,hireDate);
 
-		if (result <= 1){
+		if (result < 1){
 			return 5L;
 		}else if (result <= 5){
 			return  15*result;

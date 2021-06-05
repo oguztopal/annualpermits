@@ -15,4 +15,13 @@ public enum PermissionStatus {
 	public String getKey() {
 		return key;
 	}
+
+	public static PermissionStatus getEnumByName(String name) {
+		for (PermissionStatus permissionStatus : PermissionStatus.values()) {
+			if (permissionStatus.name().equals(name)) {
+				return permissionStatus;
+			}
+		}
+		return null;
+	}
 }
